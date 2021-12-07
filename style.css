@@ -1175,7 +1175,7 @@ a:hover, a:active {
     margin-left: 0;
   }
 }
-@media only screen and (max-width: 1500px) {
+@media only screen and (max-width: 1700px) {
   .mobile-topbar {
     line-height: 1.875;
     padding: 7px 0;
@@ -1803,7 +1803,7 @@ a:hover, a:active {
   top: 32px;
 }
 
-@media screen and (min-width: 1500px) {
+@media screen and (min-width: 1700px) {
   .header-static .is-stuck{
     background-color: #fff;
   }
@@ -1847,7 +1847,7 @@ a:hover, a:active {
   display: none;
 }
 
-@media only screen and (max-width: 1500px) {
+@media only screen and (max-width: 1700px) {
   .octf-main-header {
     display: none;
   }
@@ -2141,7 +2141,7 @@ a:hover, a:active {
   flex: 2;
 }
 
-@media (max-width: 1500px) {
+@media (max-width: 1700px) {
   .header-fullwidth .octf-area-wrap {
     width: 100%;
     padding: 0 !important;
@@ -3778,7 +3778,7 @@ object {
     padding-right: 34px;
   }
 }
-@media (max-width: 1500px) {
+@media (max-width: 1700px) {
   .icon-box-s2.s2:before {
     width: 100%;
   }
@@ -4673,7 +4673,7 @@ object {
   display: block;
 }
 
-@media only screen and (max-width: 1500px) {
+@media only screen and (max-width: 1700px) {
   .contact-info.box-style1:hover {
     box-shadow: none;
   }
@@ -6862,7 +6862,7 @@ div.tp-bullet.selected, div.tp-bullet:hover {
 }
 
 /* Index 6 */
-@media screen and (min-width: 1500px){
+@media screen and (min-width: 1700px){
   .header-second-color .is-stuck {
       background-color: #fff;
   }
@@ -9117,7 +9117,7 @@ body.font-9, .font-9 button, .font-9 input, .font-9 select, .font-9 optgroup, .f
     margin-left: 100px;
   }
 }
-@media (max-width: 1500px){
+@media (max-width: 1700px){
   .site-header-9 .header_mobile .mobile_nav .mobile_mainmenu > li > a:hover, 
   .site-header-9 .header_mobile .mobile_nav .mobile_mainmenu > li.current-menu-item > a, 
   .site-header-9 .header_mobile .mobile_nav .mobile_mainmenu > li.current-menu-ancestor > a, 
@@ -9257,7 +9257,7 @@ body.i10, .i10 button, .i10 input, .i10 select, .i10 optgroup, .i10 textarea,
 .site-header-10 .main-navigation > ul > li:last-child {
   margin-right: 0;
 }
-@media screen and (min-width: 1500px){
+@media screen and (min-width: 1700px){
   .site-header-10 .is-stuck {
     background-color: #1B334B;
   }
@@ -9727,7 +9727,7 @@ hr.double {
     padding-right: 30px;
   }
 }
-@media (max-width: 1500px) {
+@media (max-width: 1700px) {
   .site-header-10 .header_mobile, .site-header-10 .header_mobile .mobile_nav  {
     background: #1B334B;
   }
@@ -9867,7 +9867,7 @@ hr.double {
 .site-header-11 .main-navigation > ul > li:last-child {
   margin-right: 0;
 }
-@media only screen and (max-width: 1500px){
+@media only screen and (max-width: 1700px){
 .site-header-11 .header_mobile .mobile_nav .mobile_mainmenu > li > a:hover, .site-header-11 .header_mobile .mobile_nav .mobile_mainmenu > li.current-menu-item > a,
 .site-header-11 .header_mobile .mobile_nav .mobile_mainmenu > li.current-menu-ancestor > a, .site-header-11 .header_mobile .mobile_nav .mobile_mainmenu li li a:hover, 
 .site-header-11 .header_mobile .mobile_nav .mobile_mainmenu ul > li > ul > li.current-menu-ancestor > a, 
@@ -11512,7 +11512,7 @@ section {
     margin-right: 0;
   }
 }
-@media (max-width: 1500px) {
+@media (max-width: 1700px) {
   .about-v5, .overlay-image-about5, .team-info {
     background-size: 0 auto;
   }
