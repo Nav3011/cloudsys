@@ -162,7 +162,7 @@ body.royal_preloader {
     overflow: hidden;
     background-position: 50% 50%;
     background-repeat: no-repeat;
-    background-size: 100%;
+    background-size: 50%;
     border-radius: 5px;
 }
 #royal_preloader.royal_preloader_logo .royal_preloader_loader div {
