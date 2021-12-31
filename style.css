@@ -377,7 +377,7 @@ textarea {
   color: #6d6d6d;
   font-family: "Nunito Sans", sans-serif;
   font-size: 16px;
-  line-height: 1.875;
+  line-height: 0.875;
   font-weight: 400;
   -ms-word-wrap: break-word;
   word-wrap: break-word;
@@ -1877,7 +1877,7 @@ a:hover, a:active {
     padding: 10px 0px;
   }
   .header_mobile .mlogo_wrapper img {
-    height: 45px;
+    height: 64px;
   }
 
   .header_mobile .mlogo_wrapper .mobile_logo {
@@ -1889,12 +1889,12 @@ a:hover, a:active {
     cursor: pointer;
     width: 26px;
     height: 20px;
-    right: 0px;
+    right: -73px;
     margin-top: -10px;
     top: 50%;
   }
 
-  #mmenu_toggle button {
+  /* #mmenu_toggle button {
     position: absolute;
     left: 0;
     top: 50%;
@@ -1967,7 +1967,7 @@ a:hover, a:active {
     transform: rotate3d(0, 0, 1, 45deg);
     -webkit-transform-origin: 50% 50%;
     transform-origin: 50% 50%;
-  }
+  } */
 
   .header_mobile .mobile_nav {
     display: none;
@@ -6440,7 +6440,7 @@ div.tp-bullet.selected, div.tp-bullet:hover {
     background-image: url(http://templates.thememodern.com/engitech/images/background/bg-art2-home4.png);
     background-position: bottom left;
     background-repeat: no-repeat;
-    padding: 60px 0 90px 0;
+    padding: 33px 0 91px 0;
 }
 .overlay-image {
     background-image: url(http://templates.thememodern.com/engitech/images/background/bg-art-2.png);
@@ -6500,7 +6500,7 @@ div.tp-bullet.selected, div.tp-bullet:hover {
 .service2-v4 {
     background-image: url(http://templates.thememodern.com/engitech/images/background/bg-art2-home4.png);
     background-repeat: no-repeat;
-    padding: 110px 0 205px 0;
+    padding: 26px 0 14px 0;
 }
 .overlay-image-2 {
     background-image: url(https://via.placeholder.com/349x354.png);
@@ -11914,9 +11914,151 @@ section {
   line-height:60px;
   height:60px;
   display: none;
-  padding-left:10px;
+  padding-right:50px;
   width: 100%;
   margin-left: auto;
   margin-right: auto;
   margin-top: 30px;
+
+
 }
+
+  /*.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    right: 10px;
+    background-color: black;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+   
+  }
+  .sidenav a {
+    padding: 0px 8px 0px 32px;
+    text-decoration: none;
+    font-size: 17px;
+    color: white;
+    display: block;
+    transition: 11.3s;
+  }
+  .sidenav a:hover {
+    color: #f1f1f1;
+  }
+  
+  .sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 50px;
+    font-size: 36px;
+    margin-right: 70px;
+  }
+  .sidenav a:hover {
+    color: #f1f1f1;
+  }*/
+  
+   .sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: -260px;
+    font-size: 36px;
+    margin-right: 70px;
+  } 
+  
+  #main {
+    transition: margin-right .1s;
+    padding: -4px;
+  }
+  
+  @media screen and (max-height: 450px) {
+    .sidenav {padding-top: 30px;}
+    .sidenav a {font-size: 18px;}
+  }
+
+  @import url('https://fonts.googleapis.com/css?family=Roboto');
+  body{
+      font-family: 'Roboto', sans-serif;
+ }
+  h1{
+      text-align: center;
+      color: #4181ee;
+ }
+  .wrapper{
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+ }
+  .card{
+     max-width: 300px;
+      min-height: 227px;
+      background: #02b875;
+      padding: 30px;
+      box-sizing: border-box;
+      color: #FFF;
+      margin:10px;
+      box-shadow: 5px 2px 18px -4px rgba(0,0,0,0.75);
+      border-radius: 50px 50px 50px 50px;;
+ }
+  .card:nth-child(2){
+     background: #4181ee;
+ }
+  .card:last-child{
+     background: #673ab7;
+ }
+  .card-title{
+      margin-top: 0;
+      font-size: 16px;
+      font-weight: 600;
+      letter-spacing: 1.2px;
+ }
+  .card-content{
+      font-size: 16px;
+      letter-spacing: 0.5px;
+      line-height: 1.5;
+ }
+  .card-btn{
+      all: unset;
+      display: block;
+      margin-left: auto;
+      border: 2px solid #FFF;
+      padding: 10px 15px;
+      border-radius: 25px;
+      font-size: 10px;
+      font-weight: 600;
+      transition: all 0.5s;
+      cursor: pointer;
+      letter-spacing: 1.2px;
+ }
+  .card-btn:hover{
+     color:#02b875;
+     background: #FFF;
+ }
+  .card:nth-child(2) .card-btn:hover{
+     color:#4181ee;
+     background: #FFF;
+ }
+  .card:last-child .card-btn:hover{
+     color:#673ab7;
+      background: #FFF;
+ }
+ 
+
+
+
+
+
+.column {
+  float: left;
+  width: 33.33%;
+  padding: 5px;
+}
+
+/* Clear floats after image containers */
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+ 

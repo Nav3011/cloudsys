@@ -20,6 +20,110 @@
     <link rel="stylesheet" type="text/css" href="plugins/revolution/revolution/css/settings.css">   
     <!-- REVOLUTION NAVIGATION STYLE -->
     <link rel="stylesheet" type="text/css" href="plugins/revolution/revolution/css/navigation.css">
+
+<style>
+    @media (min-width: 992px) {
+        .navbar-expand-lg .navbar-nav .nav-link {
+            padding-right: 2.5rem;
+        }
+    }
+    @media (min-width: 992px) {
+        .tp-mask-wrap {
+            margin-top: -80px;
+        }
+    }
+    @media only screen and (min-device-width: 768px)
+    {
+        .side-nav{
+            margin-left: 600px;
+        }
+        .side-nav-mobile{
+            display: none;
+        }
+    }
+    @media only screen and (max-device-width: 768px)
+    {
+        #main {
+            padding: 0px;
+            margin-left: 260px;
+        }
+    }
+
+    body {
+  font-family: "Lato", sans-serif;
+}
+
+/* Fixed sidenav, full height */
+.sidenav {
+  height: 100%;
+  width: 253px;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  right: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  padding-top: 20px;
+}
+
+/* Style the sidenav links and the dropdown button */
+.sidenav a, .dropdown-btn {
+  padding: 6px 8px 6px 16px;
+  text-decoration: none;
+  font-size: 20px;
+  color: #818181;
+  display: block;
+  border: none;
+  background: none;
+  width: 100%;
+  text-align: left;
+  cursor: pointer;
+  outline: none;
+}
+
+/* On mouse-over */
+.sidenav a:hover, .dropdown-btn:hover {
+  color: #f1f1f1;
+}
+
+/* Main content */
+.main {
+  margin-left: 200px; /* Same as the width of the sidenav */
+  font-size: 20px; /* Increased text to enable scrolling */
+  padding: 0px 10px;
+}
+
+/* Add an active class to the active dropdown button */
+.active {
+  
+  color: white;
+}
+
+/* Dropdown container (hidden by default). Optional: add a lighter background color and some left padding to change the design of the dropdown content */
+.dropdown-container {
+  display: none;
+  background-color: #262626;
+  padding-left: 8px;
+}
+
+/* Optional: Style the caret down icon */
+.fa-caret-down {
+  float: right;
+  padding-right: 8px;
+}
+
+/* Some media queries for responsiveness */
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+</style>
+
+    
+      
+
+
+
 </head>
 
 <body class="royal_preloader">
@@ -56,7 +160,7 @@
                                 <div class="octf-col logo-col">
                                     <div id="site-logo" class="site-logo">
                                         <a href="index.html">
-                                            <img style="width: 60px;" src="images/logolight.png" alt="Engitech" class="" >
+                                            <img src="images/logolight.png" alt="Engitech" style="height: 350px;">
                                         </a>
                                     </div>
                                 </div>
@@ -64,7 +168,7 @@
                                     <nav id="site-navigation" class="main-navigation">
                                         <ul class="menu">
                                             <li class="menu-item current-menu-item current-menu-ancestor">
-                                                <a href="index.html">Home</a>
+                                                <a href="index.html">&nbsp;&nbsp;&nbsp;Home</a>
                                                 <!-- <ul class="sub-menu"> -->
                                                     <!-- <li><a href="index.html">Home 1</a></li>
                                                     <li><a href="index-2.html">Home 2</a></li>
@@ -79,7 +183,7 @@
                                                     <li><a href="index-11.html">Home 11</a></li> -->
                                                 <!-- </ul> -->
                                             </li>
-                                            <li   class =  "menu-item"  ><a href="about-us.html">About us </a>
+                                            <li   class =  "menu-item"  ><a href="about-us.html"> &nbsp;&nbsp;&nbsp;About us </a>
                                                 <!-- <ul class="sub-menu">
                                                     <li><a href="about-us.html">About us</a></li>
                                                     <li><a href="why-choose-us.html">Why Choose Us</a></li>
@@ -126,14 +230,14 @@
                                                     </li>
                                                 </ul>
                                             </li> -->
-                                             <li   class =  "menu-item"  ><a href="training.html">Training</a>
+                                             <li   class =  "menu-item"  ><a href="training.html">&nbsp;&nbsp;&nbsp;Training</a>
                                                 <!-- <ul class="sub-menu">
                                                     <li><a href="blog.html">Blog Listing</a></li>
                                                     <li><a href="blog-grid.html">Blog Grid</a></li>
                                                     <li><a href="post.html">Blog Single</a></li>
                                                 </ul> -->
                                             </li> 
-                                            <li><a href="contact.html">Contacts</a></li>
+                                            <li><a href="contact.html">&nbsp;&nbsp;&nbsp;Contacts</a></li>
                                         </ul>
                                     </nav>
                                 </div>
@@ -235,6 +339,7 @@
                                   <li class="nav-item">
                                     <a style="color: black;" class="nav-link" href="contact.html">Contact</a>
                                   </li>
+                                  <span style="font-size:30px;cursor:pointer" class="side-nav" onclick="openNav()">&#9776; </span>
                               </ul>
                               <!-- <span class="navbar-text">
                                 Navbar text with an inline element
@@ -242,40 +347,41 @@
                             </div>
                           </nav>
                         
-
-
-
-
-
-
-
-
-
-
-
-                        <div id="mmenu_toggle">
+                        <!-- <div id="mmenu_toggle">
                             <button></button>
-                        </div>
+                        </div> -->
+
+                        <div id="mySidenav" class="sidenav">
+                            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                            <a href="index.html"><i class="fa fa-home"></i>&nbsp;Home</a> <hr>
+                            <a href="about-us.html"><i class="fas fa-address-card"></i>&nbsp;About us</a> <hr>
+                            <button class="dropdown-btn"><i class="fas fa-user"></i>&nbsp;Services 
+                              <i class="fa fa-caret-down"></i>
+                            </button>
+   <div class="dropdown-container">
+                              <a href="erp.html">ERP</a>
+                              <a href="resource1.html">Resource Advisory</a>
+                              <a href="#">Training and Leadership</a>
+                              <a href="#">Strategic Planning</a>
+                              <a href="#">Corporate Financing</a>
+                              <a href="#">Secretarial Consulting</a>
+                            </div>
+                            <hr>
+                            <a href="training.html"><i class="fas fa-laptop-code"></i>&nbsp;Training</a> <hr>
+                            <a href="contact.html"><i class="fas fa-phone-square-alt"></i>&nbsp;Contact</a> <hr>
+                          </div>
+                          
+                          <div id="main">
+                            
+                            
+                            <span style="font-size:30px;cursor:pointer" class="side-nav-mobile" onclick="openNav()">&#9776; </span>
                     </div>
-                        
-                             <!-- <div style="margin-top: 10px;" class="row">
-                                 <div class="col"></div>
-                                <div class="col"></div>
-                                <div class="col"></div>
-                                <div class="col"></div>
-                                <div class="col"></div> 
-                                <div class="col">Home</div>
-                                <div class="col">About us</div>
-                                <div class="col">Services</div>
-                                <div class="col">Training</div>
-                                <div class="col">Contact</div>
-                              </div> -->
-                       
+                    </div>
                               <div class="mmenu_wrapper">
                                 <div class="mobile_nav collapse">
                                     <ul id="menu-main-menu" class="mobile_mainmenu">
                                         <li class="menu-item-has-children current-menu-item current-menu-ancestor">
-                                            <a href="index.html">Home</a>
+                                            <a href="index.html"> Home</a>
                                             <!-- <ul class="sub-menu">
                                                 <li><a href="index.html">Home 1</a></li>
                                                 <li><a href="index-2.html">Home 2</a></li>
@@ -347,7 +453,7 @@
                                                 <li><a href="post.html">Blog Single</a></li>
                                             </ul>
                                         </li> -->
-                                        <li><a href="contact.html">Contacts</a></li>
+                                        <li><a href="contact.html"> &nbsp;Contacts</a></li>
                                     </ul>
                                 </div>
                             </div>
@@ -358,7 +464,7 @@
         <div id="content" class="site-content">
             <div id="rev_slider_one_wrapper" class="rev_slider_wrapper fullscreen-container" data-alias="mask-showcase" data-source="gallery" style="background:#ffffff;padding:0px;">
                 <!-- START REVOLUTION SLIDER 5.4.1 fullscreen mode -->
-                <div id="rev_slider_three" class="rev_slider fullscreenbanner" style="display:none;" data-version="5.4.1">
+                <div id="rev_slider_three" class="rev_slider fullscreenbanner" style="display:right;" data-version="5.4.1">
                     <ul>
                     
                         <!-- SLIDE 1 -->
@@ -402,7 +508,7 @@
                                 data-frames='[{"delay":500,"split":"chars","splitdelay":0.1,"speed":500,"frame":"0","from":"x:[105%];z:0;rX:45deg;rY:0deg;rZ:90deg;sX:1;sY:1;skX:0;skY:0;","mask":"x:0px;y:0px;s:inherit;e:inherit;","to":"o:1;","ease":"power4.inOut"},{"delay":"wait","speed":1000,"frame":"999","to":"x:50px;z:0;rZ:0;sX:1;sY:1;skX:0;skY:0;","ease":"power3.inOut"}]'
                                 data-textAlign="['left','left','left','left']"
             
-                                style="z-index: 10; text-transform: uppercase;  font-weight: 900; color: #fff; font-family: Montserrat;">CLOUDSYS TECHNOLOGY <br> SERVICES PVT. LTD.
+                                style="z-index: 10; text-transform: uppercase;  font-weight: 900; color: #fff; font-family: Montserrat;"><h2 style="color:white;">CLOUDSYS TECHNOLOGY <br> SERVICES PVT. LTD.</h2>
                             </div>
                                                                 
                             <!-- LAYER 5  Paragraph-->
@@ -421,7 +527,7 @@
                                 
                                 data-textAlign="['left','left','left','left']"
             
-                                style="z-index: 10; white-space: normal; color: #fff;font-family: 'Nunito Sans', sans-serif;">a.	A Business Shopper’s Stop - Provides E2E Business Solution from Pre- Inception to Continuity to achieve each stage KPIs <br> and the desired growth. The Old Business School “Nice-To-Have” is now a “Must-Have” Modern Concept <br> A Broad Principle and procedure is now become the catalyst to business and A value addition is now invaluable. <br> Trust is all encompassing. We in CloudSys put the TRUST as the foremost and <br> Topmost for the Planning, Strategical Development and Optimum goal achievement for our customers..
+                                style="z-index: 10; white-space: normal; color: #fff;font-family: 'Nunito Sans', sans-serif;">  A Business Shopper’s Stop - Provides E2E Business Solution from Pre- Inception to Continuity to achieve each stage KPIs <br> and the desired growth. The Old Business School “Nice-To-Have” is now a “Must-Have” Modern Concept <br> A Broad Principle and procedure is now become the catalyst to business and A value addition is now invaluable. <br> Trust is all encompassing. We in CloudSys put the TRUST as the foremost and <br> Topmost for the Planning, Strategical Development and Optimum goal achievement for our customers..
                             </div> 
                         </li>  
                             
@@ -429,9 +535,9 @@
                                      
 
                         <!-- SLIDE 1 -->
-                        <li data-index="rs-71" data-transition="fade" data-slotamount="default" data-hideafterloop="0" data-hideslideonmobile="off"  data-easein="default" data-easeout="default" data-masterspeed="300"  data-thumb="images/slider/slide2-home4.jpg"  data-rotate="0"  data-saveperformance="off"  data-title="" data-param1="1" data-param2="" data-param3="" data-param4="" data-param5="" data-param6="" data-param7="" data-param8="" data-param9="" data-param10="" data-description="">
+                        <li data-index="rs-71" data-transition="fade" data-slotamount="default" data-hideafterloop="0" data-hideslideonmobile="off"  data-easein="default" data-easeout="default" data-masterspeed="300"  data-thumb="images/oracle01.png"  data-rotate="0"  data-saveperformance="off"  data-title="" data-param1="1" data-param2="" data-param3="" data-param4="" data-param5="" data-param6="" data-param7="" data-param8="" data-param9="" data-param10="" data-description="">
                             <!-- MAIN IMAGE -->
-                            <img src="https://www.tarrar.com/pictures/consulting_hp-min.jpg?v20191031232027" data-bgcolor='#ffffff'  alt=""  data-bgposition="50% 50%" data-bgfit="auto" data-bgrepeat="no-repeat" data-bgparallax="off" class="rev-slidebg" data-no-retina>
+                            <img src="images/oracle01.png" data-bgcolor='#ffffff'  alt=""  data-bgposition="50% 50%" data-bgfit="auto" data-bgrepeat="no-repeat" data-bgparallax="off" class="rev-slidebg" data-no-retina >
                               
                                                         
                             <!-- LAYER 3  Thin text title-->
@@ -467,7 +573,7 @@
 
                                 data-textAlign="['left','left','left','left']"
             
-                                style="z-index: 10; text-transform: uppercase;  font-weight: 900; color: #fff; font-family: Montserrat;"> ORACLE APPLICATION <br>Consulting  </div>
+                                style="z-index: 10; text-transform: uppercase;  font-weight: 900; color: #fff; font-family: Montserrat;"><h2 style="color:black ;"> ORACLE APPLICATION <br>Consulting</h2> </div>
                                                                 
                             <!-- LAYER 5  Paragraph-->
                             <div class="tp-caption tp-resizeme" 
@@ -485,7 +591,7 @@
                                 
                                 data-textAlign="['left','left','left','left']"
             
-                                    style="z-index: 10; white-space: normal; color: #fff;font-family: 'Nunito Sans', sans-serif;">Designing, Architecting, Implementing, Reimplementing, and Providing Maintenance on wide range of Oracle Applications<br> like Oracle Fusion Cloud, PeopleSoft, eBusiness Suites.</div> 
+                                    style="z-index: 10; white-space: normal; color: black;font-family: 'Nunito Sans', sans-serif;">Designing, Architecting, Implementing, Reimplementing,<br> and Providing Maintenance on wide range of Oracle Applications<br> like Oracle Fusion Cloud, PeopleSoft, eBusiness Suites</div> 
     
                             <!-- LAYER 6  Read More-->
                             <!-- <div class="tp-caption rev-btn" 
@@ -511,9 +617,9 @@
                         </li>  
 
                         <!-- SLIDE 1 -->
-                        <li data-index="rs-72" data-transition="fade" data-slotamount="default" data-hideafterloop="0" data-hideslideonmobile="off"  data-easein="default" data-easeout="default" data-masterspeed="300"  data-thumb="images/slider/slide3-home4.jpg"  data-rotate="0"  data-saveperformance="off"  data-title="" data-param1="1" data-param2="" data-param3="" data-param4="" data-param5="" data-param6="" data-param7="" data-param8="" data-param9="" data-param10="" data-description="">
+                        <li data-index="rs-72" data-transition="fade" data-slotamount="default" data-hideafterloop="0" data-hideslideonmobile="off"  data-easein="default" data-easeout="default" data-masterspeed="300"  data-thumb="images/elcc.jpg"  data-rotate="0"  data-saveperformance="off"  data-title="" data-param1="1" data-param2="" data-param3="" data-param4="" data-param5="" data-param6="" data-param7="" data-param8="" data-param9="" data-param10="" data-description="">
                             <!-- MAIN IMAGE -->
-                            <img src="https://coachhub.io/wp-content/uploads/2021/06/shutterstock_1813919066_scaled.jpg" data-bgcolor='#ffffff'  alt=""  data-bgposition="50% 50%" data-bgfit="auto" data-bgrepeat="no-repeat" data-bgparallax="off" class="rev-slidebg" data-no-retina>
+                           <img src="images/elcc3.jpg"  data-bgcolor='#ffffff'  alt=""  data-bgposition="50% 50%" data-bgfit="auto" data-bgrepeat="no-repeat" data-bgparallax="off" class="rev-slidebg" data-no-retina>
                             
                                                         
                             <!-- LAYER 3  Thin text title-->
@@ -548,7 +654,7 @@
                                 data-frames='[{"delay":500,"split":"chars","splitdelay":0.1,"speed":300,"frame":"0","from":"y:[-100%];z:0;rZ:35deg;sX:1;sY:1;skX:0;skY:0;","mask":"x:0px;y:0px;s:inherit;e:inherit;","to":"o:1;","ease":"power4.inOut"},{"delay":"wait","speed":1200,"frame":"999","to":"y:-50px;z:0;rZ:0;sX:1;sY:1;skX:0;skY:0;","ease":"power3.inOut"}]'
                                 data-textAlign="['left','left','left','left']"
             
-                                style="z-index: 10; text-transform: uppercase;  font-weight: 900; color: #fff; font-family: Montserrat;">Empowering Leadership  <br> Competency Coaching </div>
+                                style="z-index: 10; text-transform: uppercase;  font-weight: 900; color: #fff; font-family: Montserrat;"><h2 style="color:black;">Empowering Leadership  <br> Competency Coaching</h2> </div>
                                                                 
                             <!-- LAYER 5  Paragraph-->
                             <div class="tp-caption tp-resizeme" 
@@ -592,6 +698,259 @@
                             </div>   -->
                         </li>
                         
+                     
+ 
+
+<li data-index="rs-75" data-transition="fade" data-slotamount="default" data-hideafterloop="0" data-hideslideonmobile="off"  data-easein="default" data-easeout="default" data-masterspeed="300"  data-thumb="images/ras01.jpg"  data-rotate="0"  data-saveperformance="off"  data-title="" data-param1="1" data-param2="" data-param3="" data-param4="" data-param5="" data-param6="" data-param7="" data-param8="" data-param9="" data-param10="" data-description="">
+                            <!-- MAIN IMAGE -->
+                           <img src="images/ras01.jpg"  data-bgcolor='#ffffff'  alt=""  data-bgposition="50% 50%" data-bgfit="auto" data-bgrepeat="no-repeat" data-bgparallax="off" class="rev-slidebg" data-no-retina>
+                              
+                                                        
+                            <!-- LAYER 3  Thin text title-->
+                            <div class="tp-caption tp-resizeme slider-tag-line" 
+                                id="slide-71-layer-3" 
+                                data-x="['left','left','left','left']" data-hoffset="['15','15','15','15']" 
+                                data-y="['top','top','top','top']" data-voffset="['195','105','127','133']" 
+                                data-fontsize="['24',20','15','15']"
+                                data-lineheight="['36','30','22','0']"
+                                data-whitespace="nowrap"
+                     
+                                data-type="text" 
+                                data-responsive_offset="on" 
+            
+                                data-frames='[{"delay":0,"speed":500,"frame":"0","from":"y:50px;opacity:0;","to":"o:1;","ease":"power3.inOut"},{"delay":"wait","speed":1000,"frame":"999","to":"opacity:0;","ease":"power3.inOut"}]'
+            
+                                style="z-index: 8; font-weight: 400; color: #fff;font-family: 'Nunito Sans';"> 
+                            </div>
+                                   
+                            <!-- LAYER 4  Bold Title-->
+                            <div class="tp-caption tp-resizeme" 
+                                id="slide-70-layer-6" 
+                                data-x="['left','left','left','left']" data-hoffset="['15','15','15','15']" 
+                                data-y="['top','top','top','top']" data-voffset="['240','140','155','145']"
+                                data-fontsize="['72','60','48','30']"
+                                data-lineheight="['80','62','52','42']"
+                                data-whitespace="nowrap"
+                     
+                                data-type="text" 
+                                data-responsive_offset="on" 
+            
+                                data-frames='[{"delay":300,"split":"chars","splitdelay":0.1,"speed":300,"frame":"0","from":"y:[100%];c:0;z:0;rZ:-35deg;sX:1;sY:1;skX:0;skY:0;","mask":"x:0px;y:0px;s:inherit;e:inherit;","to":"o:1;","ease":"power4.inOut"},{"delay":"wait","speed":1200,"frame":"999","to":"y:50px;z:0;rZ:0;sX:1;sY:1;skX:0;skY:0;","ease":"power3.inOut"}]'
+
+                                data-textAlign="['left','left','left','left']"
+            
+                                style="z-index: 10; text-transform: uppercase;  font-weight: 900; color: #fff; font-family: Montserrat;"><h2 style="color:white" >Resource and Advisory Services</h2>  </div>
+                                                                
+                            <!-- LAYER 5  Paragraph-->
+                            <div class="tp-caption tp-resizeme" 
+                                id="slide-71-layer-7" 
+                                data-x="['left','left','left','left']" data-hoffset="['15','15','15','15']"
+                                data-y="['top','top','top','top']" data-voffset="['420','279','271','235']" 
+                                data-fontsize="['18','18','22','16']"
+                                data-lineheight="['30','34','32','28']"
+                                data-whitespace="nowrap"
+                     
+                                data-type="text" 
+                                data-responsive_offset="on" 
+            
+                                data-frames='[{"delay":2900,"speed":1000,"frame":"0","from":"y:50px;opacity:0;","to":"o:1;","ease":"power3.inOut"},{"delay":"wait","speed":1000,"frame":"999","to":"opacity:0;","ease":"power3.inOut"}]'
+                                
+                                data-textAlign="['left','left','left','left']"
+            
+                                    style="z-index: 10; white-space: normal; color: #fff;font-family: 'Nunito Sans', sans-serif;">Pool of Competent Resources to provide Advisory services by “develops findings,<br> conclusions, and recommendations for our customers consideration and decision-making<br> process with respect to business, finance and ERP products.  CloudSys provides expert resources<br> for Oracle Implementation and support services.
+</div> 
+    
+                        </li>  
+
+                        <li data-index="rs-76" data-transition="fade" data-slotamount="default" data-hideafterloop="0" data-hideslideonmobile="off"  data-easein="default" data-easeout="default" data-masterspeed="300"  data-thumb="images/sitconsulting01.jpg"  data-rotate="0"  data-saveperformance="off"  data-title="" data-param1="1" data-param2="" data-param3="" data-param4="" data-param5="" data-param6="" data-param7="" data-param8="" data-param9="" data-param10="" data-description="">
+                            <!-- MAIN IMAGE -->
+                           <img src="images/sitconsulting01.jpg"  data-bgcolor='#ffffff'  alt=""  data-bgposition="50% 50%" data-bgfit="auto" data-bgrepeat="no-repeat" data-bgparallax="off" class="rev-slidebg" data-no-retina>
+                              
+                                                        
+                            <!-- LAYER 3  Thin text title-->
+                            <div class="tp-caption tp-resizeme slider-tag-line" 
+                                id="slide-71-layer-3" 
+                                data-x="['left','left','left','left']" data-hoffset="['15','15','15','15']" 
+                                data-y="['top','top','top','top']" data-voffset="['195','105','127','133']" 
+                                data-fontsize="['24',20','15','15']"
+                                data-lineheight="['36','30','22','0']"
+                                data-whitespace="nowrap"
+                     
+                                data-type="text" 
+                                data-responsive_offset="on" 
+            
+                                data-frames='[{"delay":0,"speed":500,"frame":"0","from":"y:50px;opacity:0;","to":"o:1;","ease":"power3.inOut"},{"delay":"wait","speed":1000,"frame":"999","to":"opacity:0;","ease":"power3.inOut"}]'
+            
+                                style="z-index: 8; font-weight: 400; color: #fff;font-family: 'Nunito Sans';"> 
+                            </div>
+                                   
+                            <!-- LAYER 4  Bold Title-->
+                            <div class="tp-caption tp-resizeme" 
+                                id="slide-70-layer-6" 
+                                data-x="['left','left','left','left']" data-hoffset="['15','15','15','15']" 
+                                data-y="['top','top','top','top']" data-voffset="['240','140','155','145']"
+                                data-fontsize="['72','60','48','30']"
+                                data-lineheight="['80','62','52','42']"
+                                data-whitespace="nowrap"
+                     
+                                data-type="text" 
+                                data-responsive_offset="on" 
+            
+                                data-frames='[{"delay":300,"split":"chars","splitdelay":0.1,"speed":300,"frame":"0","from":"y:[100%];c:0;z:0;rZ:-35deg;sX:1;sY:1;skX:0;skY:0;","mask":"x:0px;y:0px;s:inherit;e:inherit;","to":"o:1;","ease":"power4.inOut"},{"delay":"wait","speed":1200,"frame":"999","to":"y:50px;z:0;rZ:0;sX:1;sY:1;skX:0;skY:0;","ease":"power3.inOut"}]'
+
+                                data-textAlign="['left','left','left','left']"
+            
+                                style="z-index: 10; text-transform: uppercase;  font-weight: 900; color: #fff; font-family: Montserrat;"><h2 style="color:white"> Strategic IT Consulting</h2>  </div>
+                                                                
+                            <!-- LAYER 5  Paragraph-->
+                            <div class="tp-caption tp-resizeme" 
+                                id="slide-71-layer-7" 
+                                data-x="['left','left','left','left']" data-hoffset="['15','15','15','15']"
+                                data-y="['top','top','top','top']" data-voffset="['420','279','271','235']" 
+                                data-fontsize="['18','18','22','16']"
+                                data-lineheight="['30','34','32','28']"
+                                data-whitespace="nowrap"
+                     
+                                data-type="text" 
+                                data-responsive_offset="on" 
+            
+                                data-frames='[{"delay":2900,"speed":1000,"frame":"0","from":"y:50px;opacity:0;","to":"o:1;","ease":"power3.inOut"},{"delay":"wait","speed":1000,"frame":"999","to":"opacity:0;","ease":"power3.inOut"}]'
+                                
+                                data-textAlign="['left','left','left','left']"
+            
+                                    style="z-index: 10; white-space: normal; color: #fff;font-family: 'Nunito Sans', sans-serif;">CloudSys Experts can provide the optimum Strategic Consulting to our customers<br> for bringing the optimum class in customer ROI on the Information and Technology.<br> We Let our Customers to focus on the core business</div> 
+    
+                        </li>  
+
+                        <li data-index="rs-77" data-transition="fade" data-slotamount="default" data-hideafterloop="0" data-hideslideonmobile="off"  data-easein="default" data-easeout="default" data-masterspeed="300"  data-thumb="images/secretariatConsulting01.jpg"  data-rotate="0"  data-saveperformance="off"  data-title="" data-param1="1" data-param2="" data-param3="" data-param4="" data-param5="" data-param6="" data-param7="" data-param8="" data-param9="" data-param10="" data-description="">
+                            <!-- MAIN IMAGE -->
+                           <img src="images/secretariatConsulting01.jpg"  data-bgcolor='#ffffff'  alt=""  data-bgposition="50% 50%" data-bgfit="auto" data-bgrepeat="no-repeat" data-bgparallax="off" class="rev-slidebg" data-no-retina>
+                              
+                                                        
+                            <!-- LAYER 3  Thin text title-->
+                            <div class="tp-caption tp-resizeme slider-tag-line" 
+                                id="slide-71-layer-3" 
+                                data-x="['left','left','left','left']" data-hoffset="['15','15','15','15']" 
+                                data-y="['top','top','top','top']" data-voffset="['195','105','127','133']" 
+                                data-fontsize="['24',20','15','15']"
+                                data-lineheight="['36','30','22','0']"
+                                data-whitespace="nowrap"
+                     
+                                data-type="text" 
+                                data-responsive_offset="on" 
+            
+                                data-frames='[{"delay":0,"speed":500,"frame":"0","from":"y:50px;opacity:0;","to":"o:1;","ease":"power3.inOut"},{"delay":"wait","speed":1000,"frame":"999","to":"opacity:0;","ease":"power3.inOut"}]'
+            
+                                style="z-index: 8; font-weight: 400; color: #fff;font-family: 'Nunito Sans';"> 
+                            </div>
+                                   
+                            <!-- LAYER 4  Bold Title-->
+                            <div class="tp-caption tp-resizeme" 
+                                id="slide-70-layer-6" 
+                                data-x="['left','left','left','left']" data-hoffset="['15','15','15','15']" 
+                                data-y="['top','top','top','top']" data-voffset="['240','140','155','145']"
+                                data-fontsize="['72','60','48','30']"
+                                data-lineheight="['80','62','52','42']"
+                                data-whitespace="nowrap"
+                     
+                                data-type="text" 
+                                data-responsive_offset="on" 
+            
+                                data-frames='[{"delay":300,"split":"chars","splitdelay":0.1,"speed":300,"frame":"0","from":"y:[100%];c:0;z:0;rZ:-35deg;sX:1;sY:1;skX:0;skY:0;","mask":"x:0px;y:0px;s:inherit;e:inherit;","to":"o:1;","ease":"power4.inOut"},{"delay":"wait","speed":1200,"frame":"999","to":"y:50px;z:0;rZ:0;sX:1;sY:1;skX:0;skY:0;","ease":"power3.inOut"}]'
+
+                                data-textAlign="['left','left','left','left']"
+            
+                                style="z-index: 10; text-transform: uppercase;  font-weight: 900; color: #fff; font-family: Montserrat;"><h2 style="color:white">Secretarial Consulting</h2>  </div>
+                                                                
+                            <!-- LAYER 5  Paragraph-->
+                            <div class="tp-caption tp-resizeme" 
+                                id="slide-71-layer-7" 
+                                data-x="['left','left','left','left']" data-hoffset="['15','15','15','15']"
+                                data-y="['top','top','top','top']" data-voffset="['420','279','271','235']" 
+                                data-fontsize="['18','18','22','16']"
+                                data-lineheight="['30','34','32','28']"
+                                data-whitespace="nowrap"
+                     
+                                data-type="text" 
+                                data-responsive_offset="on" 
+            
+                                data-frames='[{"delay":2900,"speed":1000,"frame":"0","from":"y:50px;opacity:0;","to":"o:1;","ease":"power3.inOut"},{"delay":"wait","speed":1000,"frame":"999","to":"opacity:0;","ease":"power3.inOut"}]'
+                                
+                                data-textAlign="['left','left','left','left']"
+            
+                                    style="z-index: 10; white-space: normal; color: #fff;font-family: 'Nunito Sans', sans-serif;">Best in Class Secretarial Practice consulting, providing extended help to the startups<br> and young entrepreneurs in establishing new corporates, and then and thereof till the<br> formation of a matured corporate establishment</div> 
+    
+                        </li>  
+                         <li data-index="rs-78" data-transition="fade" data-slotamount="default" data-hideafterloop="0" data-hideslideonmobile="off"  data-easein="default" data-easeout="default" data-masterspeed="300"  data-thumb="images/cfc1.jpg"  data-rotate="0"  data-saveperformance="off"  data-title="" data-param1="1" data-param2="" data-param3="" data-param4="" data-param5="" data-param6="" data-param7="" data-param8="" data-param9="" data-param10="" data-description="">
+                            <!-- MAIN IMAGE -->
+                           <img src="images/cfc1.jpg"  data-bgcolor='#ffffff'  alt=""  data-bgposition="50% 50%" data-bgfit="auto" data-bgrepeat="no-repeat" data-bgparallax="off" class="rev-slidebg" data-no-retina>
+                              
+                                                        
+                            <!-- LAYER 3  Thin text title-->
+                            <div class="tp-caption tp-resizeme slider-tag-line" 
+                                id="slide-71-layer-3" 
+                                data-x="['left','left','left','left']" data-hoffset="['15','15','15','15']" 
+                                data-y="['top','top','top','top']" data-voffset="['195','105','127','133']" 
+                                data-fontsize="['24',20','15','15']"
+                                data-lineheight="['36','30','22','0']"
+                                data-whitespace="nowrap"
+                     
+                                data-type="text" 
+                                data-responsive_offset="on" 
+            
+                                data-frames='[{"delay":0,"speed":500,"frame":"0","from":"y:50px;opacity:0;","to":"o:1;","ease":"power3.inOut"},{"delay":"wait","speed":1000,"frame":"999","to":"opacity:0;","ease":"power3.inOut"}]'
+            
+                                style="z-index: 8; font-weight: 400; color: #fff;font-family: 'Nunito Sans';"> 
+                            </div>
+                                   
+                            <!-- LAYER 4  Bold Title-->
+                            <div class="tp-caption tp-resizeme" 
+                                id="slide-70-layer-6" 
+                                data-x="['left','left','left','left']" data-hoffset="['15','15','15','15']" 
+                                data-y="['top','top','top','top']" data-voffset="['240','140','155','145']"
+                                data-fontsize="['72','60','48','30']"
+                                data-lineheight="['80','62','52','42']"
+                                data-whitespace="nowrap"
+                     
+                                data-type="text" 
+                                data-responsive_offset="on" 
+            
+                                data-frames='[{"delay":300,"split":"chars","splitdelay":0.1,"speed":300,"frame":"0","from":"y:[100%];c:0;z:0;rZ:-35deg;sX:1;sY:1;skX:0;skY:0;","mask":"x:0px;y:0px;s:inherit;e:inherit;","to":"o:1;","ease":"power4.inOut"},{"delay":"wait","speed":1200,"frame":"999","to":"y:50px;z:0;rZ:0;sX:1;sY:1;skX:0;skY:0;","ease":"power3.inOut"}]'
+
+                                data-textAlign="['left','left','left','left']"
+            
+                                style="z-index: 10; text-transform: uppercase;  font-weight: 900; color: #fff; font-family: Montserrat;"><h3 style="color:white">Corporate Finance & Consulting
+</h3>  </div>
+                                                                
+                            <!-- LAYER 5  Paragraph-->
+                            <div class="tp-caption tp-resizeme" 
+                                id="slide-71-layer-7" 
+                                data-x="['left','left','left','left']" data-hoffset="['15','15','15','15']"
+                                data-y="['top','top','top','top']" data-voffset="['420','279','271','235']" 
+                                data-fontsize="['18','18','22','16']"
+                                data-lineheight="['30','34','32','28']"
+                                data-whitespace="nowrap"
+                     
+                                data-type="text" 
+                                data-responsive_offset="on" 
+            
+                                data-frames='[{"delay":2900,"speed":1000,"frame":"0","from":"y:50px;opacity:0;","to":"o:1;","ease":"power3.inOut"},{"delay":"wait","speed":1000,"frame":"999","to":"opacity:0;","ease":"power3.inOut"}]'
+                                
+                                data-textAlign="['left','left','left','left']"
+            
+                                    style="z-index: 10; white-space: normal; color: #fff;font-family: 'Nunito Sans', sans-serif;">CloudSys Providing consulting services on corporate financing <br>and business alignments with banks and NBFCs
+</div> 
+    
+                        </li>  
+
+
+
+
+
+
+
+
+
                         
                      </ul>
                     <div class="tp-bannertimer" style="height: 10px; background: rgba(0, 0, 0, 0);"></div>
@@ -1453,6 +1812,21 @@
     <script src="js/jquery.countdown.min.js"></script>
     <script src="js/scripts.js"></script>
     <script src="js/header-mobile.js"></script>
+
+
+
+
+    <script>
+        function openNav() {
+          document.getElementById("mySidenav").style.width = "250px";
+          document.getElementById("main").style.marginLeft = "250px";
+        }
+        
+        function closeNav() {
+          document.getElementById("mySidenav").style.width = "0";
+          document.getElementById("main").style.marginLeft= "260";
+        }
+        </script>
     <!-- REVOLUTION JS FILES -->
 
     <script  src="plugins/revolution/revolution/js/jquery.themepunch.tools.min.js"></script>
@@ -1478,6 +1852,21 @@
                 background:  '#ffffff'
             });
         })(jQuery);
+
+         var dropdown = document.getElementsByClassName("dropdown-btn");
+var i;
+
+for (i = 0; i < dropdown.length; i++) {
+  dropdown[i].addEventListener("click", function() {
+  this.classList.toggle("active");
+  var dropdownContent = this.nextElementSibling;
+  if (dropdownContent.style.display === "block") {
+  dropdownContent.style.display = "none";
+  } else {
+  dropdownContent.style.display = "block";
+  }
+  });
+}
     </script> 
 </body>
 </html>
